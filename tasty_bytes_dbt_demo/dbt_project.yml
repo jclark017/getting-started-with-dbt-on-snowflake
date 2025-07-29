@@ -18,8 +18,12 @@ clean-targets: [target, dbt_modules]
 
 ## Models
 models:
-  tasty_bytes:
+  provider:
     staging:
       +materialized: view
+      practice:
+        +schema: practice_dp
+      provider:
+        +schema: provider_dp
     marts:
       +materialized: table
